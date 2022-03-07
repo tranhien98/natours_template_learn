@@ -1,0 +1,27 @@
+/// from abstracts
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+
+/// from base
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilitles";
+
+
+/// from component
+@import "components/button";
+@import "components/composition";
+
+
+
+/// from layout
+@import "layout/header";
+@import "layout/grid";
+
+/// from pages
+@import "pages/home"
+
+
