@@ -197,11 +197,7 @@ body {
   text-align: center;
 }
 
-.btn {
-  position: relative;
-}
-
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -230,8 +226,8 @@ body {
 
 .btn:active, .btn:focus {
   outline: none;
-  -webkit-transform: translateY(-1);
-          transform: translateY(-1);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
   -webkit-box-shadow: 0 0.5 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5 1rem rgba(0, 0, 0, 0.2);
 }
@@ -378,7 +374,7 @@ body {
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
-  background-color: white;
+  background-color: #f7f7f7;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   position: relative;
@@ -398,6 +394,7 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: 3px;
+  overflow: hidden;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
@@ -415,6 +412,16 @@ body {
 .card__side--back-1 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+
+.card__side--back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.card__side--back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
 
 .card:hover .card__side--front {
@@ -441,13 +448,13 @@ body {
 }
 
 .card__picture--2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url(../../img/nat-5.jpg);
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/nat-5.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url(../../img/nat-6.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/nat-6.jpg);
 }
 
 .card__picture--3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url(../../img/nat-5.jpg);
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/nat-5.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url(../../img/nat-7.jpg);
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../img/nat-7.jpg);
 }
 
 .card__heading {
@@ -474,6 +481,21 @@ body {
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
 }
 
+.card__heading-span--1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.85)), to(rgba(255, 119, 48, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+
+.card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(40, 180, 133, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+
+.card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(86, 67, 250, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+}
+
 .card__details {
   margin-top: 2rem;
 }
@@ -492,6 +514,33 @@ body {
 
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.card__cta {
+  text-align: center;
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.card__price-box {
+  margin: 0 auto;
+  color: #fff;
+  margin-bottom: 8rem;
+}
+
+.card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.card__price-value {
+  font-size: 6rem;
+  font-weight: 100;
 }
 
 .header {
@@ -582,5 +631,7 @@ body {
 
 .section-tours {
   padding: 20rem 0;
+  background-color: #f7f7f7;
+  margin-top: -10rem;
 }
 /*# sourceMappingURL=main.css.map */
